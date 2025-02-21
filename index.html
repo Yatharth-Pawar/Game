@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Math Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="player-name" placeholder="Your Name">
+        <button onclick="showAgeSelection()">Start</button>
+    </div>
+
+    <!-- Age Selection Screen -->
+    <div id="age-screen" class="hidden">
+        <h2>Select Your Age</h2>
+        <button onclick="selectAge('5-7')">5-7</button>
+        <button onclick="selectAge('8-10')">8-10</button>
+        <button onclick="selectAge('11+')">11+</button>
+    </div>
+
+    <!-- Category Selection Screen -->
+    <div id="category-screen" class="hidden">
+        <h2>Select a Category</h2>
+        <button onclick="selectCategory('Addition')">Addition</button>
+        <button onclick="selectCategory('Subtraction')">Subtraction</button>
+        <button onclick="selectCategory('Multiplication')">Multiplication</button>
+        <button onclick="selectCategory('Division')">Division</button>
+    </div>
+
+    <!-- Difficulty Selection Screen -->
+    <div id="difficulty-screen" class="hidden">
+        <h2>Select Difficulty</h2>
+        <button onclick="selectDifficulty('Easy')">Easy</button>
+        <button onclick="selectDifficulty('Medium')">Medium</button>
+        <button onclick="selectDifficulty('Hard')">Hard</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+        <h2>Math Game</h2>
+        <p id="timer">Time: 30</p>
+        <p id="question"></p>
+        <div id="options"></div>
+    </div>
+
+    <!-- Final Score Screen -->
+    <div id="final-screen" class="hidden">
+        <h2>Game Over!</h2>
+        <p id="final-score"></p>
+        <p id="high-score"></p>
+        <p id="correct-incorrect"></p>
+        <p id="reward"></p>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
